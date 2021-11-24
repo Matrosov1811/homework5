@@ -13,25 +13,26 @@ public class Main {
         System.out.println("Введите арифметиское действие (‘+’, ‘-’, ‘*’ или ‘/’)");
         switch (s.next().charAt(0)) {
             case '+':
-                System.out.println(calc.sum(a, b));
+                System.out.printf("%.4f",calc.sum(a, b));
                 break;
             case '-':
-                System.out.println(calc.subtraction(a, b));
+                System.out.printf("%.4f",calc.subtraction(a, b));
                 break;
             case '*':
-                System.out.println(calc.multiplication(a, b));
+                System.out.printf("%.4f",calc.multiplication(a, b));
                 break;
             case '/':
                 if (b == 0) {
                     System.out.println("На ноль делить нельзя!");
                     break;
                 }
-                System.out.println(calc.div(a, b));
+                System.out.printf("%.4f",calc.div(a, b));
                 break;
             default:
                 System.out.println("Вы ввели некорректный оператор");
                 break;
         }
+        s.close();
 
     }
 
